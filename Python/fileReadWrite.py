@@ -6,5 +6,10 @@ def fileRead():
     print(data)
     handler.close()
 
+def fileWrite():
+    handler = open('data/output.txt','w')
+    handler.write("This is a test!")
+    handler.close()
 
 fileRead()
+fileWrite()
