@@ -3,21 +3,26 @@ __author__ = 'warrickmoran'
 
 def file_read():
     """
-        Read File
+    Read File Contents
     """
-    handler = open('data/text.txt', 'r')
-    data = handler.readlines() # read ALL the lines!
-    print(data)
-    handler.close()
+    try:
+        with open('data/text.txt', 'r') as handler:
+            data = handler.readlines() # read ALL the lines!
+            print(data)
+    except IOError:
+        print("An IOError has occurred!")
 
 
 def file_write():
     """
-        Write File
+    Write File
     """
-    handler = open('data/output.txt','w')
-    handler.write("This is a test!")
-    handler.close()
+    try:
+        with open('data/output.txt','w') as handler:
+            handler.write("This is a test!")
+    except IOError:
+        print("An IOError has occurred!")
+
 
 file_read()
 file_write()
