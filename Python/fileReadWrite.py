@@ -23,6 +23,6 @@ def file_write():
     except IOError:
         print("An IOError has occurred!")
 
-
-file_read()
-file_write()
+if __name__ == '__main__':
+    file_read()
+    file_write()
