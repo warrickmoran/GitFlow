@@ -1,0 +1,38 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "origin"]
+	url = https://github.com/warrickmoran/GitFlow.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[gitflow "branch"]
+	develop = develop
+	master = master
+[gitflow "prefix"]
+	feature = feature/
+	release = release/
+	hotfix = hotfix/
+	support = support/
+	versiontag = python-
+[branch "feature/Feature-write"]
+	remote = origin
+	merge = refs/heads/feature/Feature-write
+[branch "develop"]
+	remote = origin
+	merge = refs/heads/develop
+	rebase = true
+[branch "feature/Feature-IOExceptions"]
+	remote = origin
+	merge = refs/heads/feature/Feature-IOExceptions
+[branch]
+	autosetuprebase = always
+[branch "release/Release-ReadWrite"]
+	remote = origin
+	merge = refs/heads/release/Release-ReadWrite
+	rebase = true
